@@ -83,6 +83,7 @@ public class TutorialController {
 			tutorialRepository.deleteById(id);
 			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 		} catch (Exception e) {
+			System.out.println("There is no such tutorial in DataBase!!!");
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
